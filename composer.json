@@ -1,5 +1,5 @@
 {
-    "name": "nfephp-org/sped-nfe",
+    "name": "fonini/sped-nfe",
     "type": "library",
     "description": "API para geração e comunicação da NFe e NFCe com as SEFAZ autorizadoras.",
     "keywords": ["nfe","nfce","sped","nfephp"],
@@ -17,9 +17,15 @@
             "homepage": "https://github.com/nfephp-org/sped-nfe/graphs/contributors"
         }
     ],
+     "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/fonini/sped-common.git"
+        }
+    ],
     "require": {
         "php" : ">= 7.0",
-        "nfephp-org/sped-common" : "^5.0",
+        "fonini/sped-common": "dev-master",
         "nfephp-org/sped-gtin" : "^1.0",
         "justinrainbow/json-schema": "^5.2",
         "ext-zlib": "*",
