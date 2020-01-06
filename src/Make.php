@@ -364,9 +364,9 @@ class Make
      * Call method of xml assembly. For compatibility only.
      * @return boolean
      */
-    public function montaNFe()
+    public function montaNFe($checkKey = true)
     {
-        return $this->monta();
+        return $this->monta($checkKey);
     }
 
     /**
