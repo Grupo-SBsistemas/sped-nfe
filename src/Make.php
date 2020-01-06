@@ -376,7 +376,7 @@ class Make
      * directly by the public property $xml
      * @return boolean
      */
-    public function monta()
+    public function monta($checkKey = true)
     {
         if (count($this->erros) > 0) {
             return false;
@@ -433,7 +433,9 @@ class Make
         //[0] tag NFe
         $this->dom->appendChild($this->NFe);
         // testa da chave
-        $this->checkNFeKey($this->dom);
+        if ($checkKey){
+            $this->checkNFeKey($this->dom);
+        }
         $this->xml = $this->dom->saveXML();
         return true;
     }
