@@ -334,10 +334,10 @@ class Make
      * Returns xml string and assembly it is necessary
      * @return string
      */
-    public function getXML()
+    public function getXML($checkKey = true)
     {
         if (empty($this->xml)) {
-            $this->montaNFe();
+            $this->montaNFe($checkKey);
         }
         return $this->xml;
     }
