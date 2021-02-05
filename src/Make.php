@@ -1668,6 +1668,7 @@ class Make
             'cEAN',
             'xProd',
             'NCM',
+            'CEST',
             'cBenef',
             'EXTIPI',
             'CFOP',
@@ -1739,6 +1740,16 @@ class Make
             true,
             $identificador . "[item $std->item] Código NCM com 8 dígitos ou 2 dígitos (gênero)"
         );
+
+        // CEST no produto.  Evitar 806
+        $this->dom->addChild(
+            $prod,
+            "CEST",
+            str_pad($std->CEST, 7, '0', STR_PAD_LEFT),
+            false,
+            $identificador . "[item $std->item] Código CEST para caso de ST"
+        );
+
         //incluido no layout 4.00
         $this->dom->addChild(
             $prod,
